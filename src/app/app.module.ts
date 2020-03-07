@@ -7,8 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { PrimeNGModule } from './primeng.module';
+// import { PrimeNGModule } from './primeng.module';
 import { StoreModule } from './store/store.module';
+
+
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { CarService } from './store/service/carservice';
+import { CountryService } from './store/service/countryservice';
+import { EventService } from './store/service/eventservice';
+import { NodeService } from './store/service/nodeservice';
+import { IconService } from './store/service/iconservice';
 
 
 @NgModule({
@@ -19,12 +27,13 @@ import { StoreModule } from './store/store.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    PrimeNGModule,
     FormsModule,
     HttpClientModule,
     StoreModule
   ],
-  providers: [],
+  // providers: [
+  //   CarService, CountryService, EventService, NodeService, IconService
+  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
