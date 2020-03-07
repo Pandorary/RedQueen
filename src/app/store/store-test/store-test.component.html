@@ -1,0 +1,85 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+
+<h3 class="first">Addons</h3>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+            <input type="text" pInputText placeholder="Username">         
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">$</span>
+            <input type="text" pInputText placeholder="Price">   
+            <span class="ui-inputgroup-addon">.00</span>      
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">www</span>
+            <input type="text" pInputText placeholder="Website">      
+        </div>
+    </div>
+</div>
+
+<h3>Multiple Addons</h3>
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-credit-card"></i></span>  
+            <span class="ui-inputgroup-addon"><i class="fa fa-cc-visa"></i></span>   
+            <input type="text" pInputText placeholder="Price"> 
+            <span class="ui-inputgroup-addon">$</span>  
+            <span class="ui-inputgroup-addon">.00</span>      
+        </div>
+    </div>
+</div>
+
+
+<h3 class="first">Basic: {{val1}}</h3>
+<p-slider [(ngModel)]="val1" [style]="{'width':'14em'}"></p-slider>
+
+<h3>Input: {{val2}}</h3>
+<input type="text" pInputText [(ngModel)]="val2" style="width:14em"/>
+<p-slider [(ngModel)]="val2" [style]="{'width':'14em'}"></p-slider>
+
+<h3>Animate: {{val3}}</h3>
+<p-slider [(ngModel)]="val3" [style]="{'width':'14em'}" [animate]="true"></p-slider>
+
+<h3>Step: {{val4}}</h3>
+<p-slider [(ngModel)]="val4" [style]="{'width':'14em'}" [step]="20"></p-slider>
+
+<h3>Range: {{rangeValues[0] + ' - ' + rangeValues[1]}}</h3>
+<p-slider [(ngModel)]="rangeValues" [style]="{'width':'14em'}" [range]="true"></p-slider>
+
+<h3>Vertical: {{val5}}</h3>
+<p-slider [(ngModel)]="val5" [style]="{'height':'14em'}" orientation="vertical"></p-slider>
+
+
+
+<h3 class="first">Basic</h3>
+<p-table [value]="cars">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Vin</th>
+            <th>Year</th>
+            <th>Brand</th>
+            <th>Color</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-car>
+        <tr>
+            <td>{{car.vin}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.brand}}</td>
+            <td>{{car.color}}</td>
+        </tr>
+    </ng-template>
+</p-table>
