@@ -12,25 +12,25 @@ export class StoreIndexComponent {
   // allColumns = ['识别码', '名称', '分类名称', '品牌', '数量', '规格', '使用状态', '折旧时长', '使用频率', '满意度',
   //   '是否废弃', '能否替代', '可替代的物品', '可替代物品来源', '备注', '创建时间', '创建人', '修改时间', '修改人'];
   allColumns = [
-    { field: 'identification', header: 'identification' },
-    { field: 'name', header: 'name' },
-    { field: 'categoryName', header: 'categoryName' },
-    { field: 'brand', header: 'brand' },
-    { field: 'quantity', header: 'quantity' },
-    { field: 'specification', header: 'specification' },
-    { field: 'status', header: 'status' },
-    { field: 'depreciationDuration', header: 'depreciationDuration' },
-    { field: 'frequency', header: 'frequency' },
-    { field: 'satisfaction', header: 'satisfaction' },
-    { field: 'isAbandon', header: 'isAbandon' },
-    { field: 'canReplace', header: 'canReplace' },
-    { field: 'replaceItem', header: 'replaceItem' },
-    { field: 'replaceItemSource', header: 'replaceItemSource' },
-    { field: 'remark', header: 'remark' },
-    { field: 'createTime', header: 'createTime' },
-    { field: 'createBy', header: 'createBy' },
-    { field: 'updateTime', header: 'updateTime' },
-    { field: 'updateBy', header: 'updateBy' }
+    {width:'8em', field: 'identification', header: 'identification' },
+    {width:'8em', field: 'name', header: 'name' },
+    {width:'8em', field: 'categoryName', header: 'categoryName' },
+    {width:'8em', field: 'brand', header: 'brand' },
+    {width:'10em', field: 'quantity', header: 'quantity' },
+    {width:'8em', field: 'specification', header: 'specification' },
+    {width:'10em', field: 'status', header: 'status' },
+    {width:'10em', field: 'depreciationDuration', header: 'depreciationDuration' },
+    {width:'8em', field: 'frequency', header: 'frequency' },
+    {width:'10em', field: 'satisfaction', header: 'satisfaction' },
+    {width:'8em', field: 'isAbandon', header: 'isAbandon' },
+    {width:'10em', field: 'canReplace', header: 'canReplace' },
+    {width:'8em', field: 'replaceItem', header: 'replaceItem' },
+    {width:'8em', field: 'replaceItemSource', header: 'replaceItemSource' },
+    {width:'8em', field: 'remark', header: 'remark' },
+    {width:'8em', field: 'createTime', header: 'createTime' },
+    {width:'8em', field: 'createBy', header: 'createBy' },
+    // {width:'8em', field: 'updateTime', header: 'updateTime' },
+    // {width:'8em', field: 'updateBy', header: 'updateBy' }
   ];
 
   datas: IProductItem[];
@@ -107,7 +107,7 @@ export class StoreIndexComponent {
 
   autoCreateData() {
     let dataTemp = []
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 108; i++) {
       let productItem: IProductItem = {};
       productItem.identification = Math.round((Math.random() * 10000000)).toString();
       productItem.name = Math.round((Math.random() * 1000)) + 'abc';

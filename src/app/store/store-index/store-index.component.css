@@ -1,0 +1,15 @@
+th{
+
+    white-space:pre-line;
+    word-wrap: break-word;
+        word-break: break-all;
+    
+    }
+
+    td{
+
+        white-space:pre-line;
+        word-wrap: break-word;
+            word-break: break-all;
+        
+        }
