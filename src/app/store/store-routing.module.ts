@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { StoreIndexComponent } from './store-index/store-index.component';
 import { StoreCreateComponent } from './store-create/store-create.component';
 import { StoreTestComponent } from './store-test/store-test.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,12 @@ const routes: Routes = [
     {
       path:'storeCreate',
       component:StoreCreateComponent
-    }]
+    },
+    {
+      path:'login',
+      component:LoginComponent
+    }
+  ]
   }
 ];
 

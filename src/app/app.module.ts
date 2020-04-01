@@ -4,36 +4,36 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-// import { PrimeNGModule } from './primeng.module';
 import { StoreModule } from './store/store.module';
+import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd'
+/** 配置 angular i18n **/
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
 
-
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { CarService } from './store/service/carservice';
-import { CountryService } from './store/service/countryservice';
-import { EventService } from './store/service/eventservice';
-import { NodeService } from './store/service/nodeservice';
-import { IconService } from './store/service/iconservice';
-
+registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
     HttpClientModule,
-    StoreModule
+    FormsModule,
+    ReactiveFormsModule,
+    StoreModule,
+    /** 导入 ng-zorro-antd 模块 **/
+    NgZorroAntdModule,
   ],
-  // providers: [
-  //   CarService, CountryService, EventService, NodeService, IconService
-  // ],
+  // exports:[FormsModule,ReactiveFormsModule],
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,12 +8,13 @@ import { StoreRoutingModule } from './store-routing.module';
 import { StoreCreateComponent } from './store-create/store-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreTestComponent } from './store-test/store-test.component';
-import { PrimeNGModule } from '../primeng.module';
 import { IconService } from './service/iconservice';
-import { NodeService } from './service/nodeservice';
 import { EventService } from './service/eventservice';
 import { CountryService } from './service/countryservice';
 import { CarService } from './service/carservice';
+import { LoginComponent } from './login/login.component';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { StoreTestService } from './store-test/store-test.service';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { CarService } from './service/carservice';
     StoreCenterComponent,
     StoreIndexComponent,
     StoreCreateComponent,
-    StoreTestComponent
+    StoreTestComponent,
+    LoginComponent,
+    StoreTestService
   ],
   imports: [
     CommonModule,
@@ -29,14 +32,13 @@ import { CarService } from './service/carservice';
     StoreRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    PrimeNGModule
+    NgZorroAntdModule
   ],
-  // providers: [
-  //   { provide: LocationStrategy, useClass: HashLocationStrategy },
-  //   CarService, CountryService, EventService, NodeService, IconService
-  // ],
+  exports:[
+    // ReactiveFormsModule
+  ],
   providers: [
-    CarService, CountryService, EventService, NodeService, IconService
+    CarService, CountryService, EventService, IconService
   ],
 })
 export class StoreModule { }

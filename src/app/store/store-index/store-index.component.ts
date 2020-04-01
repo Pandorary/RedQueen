@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IProductItem } from '../domain/store-model';
 import { SelectItem } from '../api/selectitem';
-import { FilterUtils } from '../utils/filterutils';
 
 @Component({
   selector: 'app-store-index',
@@ -91,18 +90,7 @@ export class StoreIndexComponent {
   }
 
   quatityFilter(value, filter, matchMode) {
-    FilterUtils[matchMode] = (value, filter): boolean => {
-      debugger;
-      if (filter === undefined || filter === null || filter.trim() === '') {
-        return true;
-      }
-
-      if (value === undefined || value === null) {
-        return false;
-      }
-
-      return parseInt(filter) > value;
-    }
+   
   }
 
   autoCreateData() {
