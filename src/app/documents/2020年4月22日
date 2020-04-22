@@ -1,0 +1,3 @@
+bug:
+Uncaught TypeError: Cannot read property 'id' of undefined at registerNgModuleType - angular PWA
+解决:在module中引入了component,并且在declares中也声明了component

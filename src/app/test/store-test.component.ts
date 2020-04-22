@@ -23,10 +23,18 @@ export class StoreTestComponent implements OnInit {
 
   val5: number;
 
-  rangeValues: number[] = [20,80];
+  rangeValues: number[] = [20, 80];
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    let arrays = [1, 2, 3];
+    let nn = arrays.findIndex((item, number, arrays) => {
+      console.log("==item" + item, "==number" + number);
+      console.log(arrays.toString());
+    });
+    let mm = arrays.findIndex((item, number, arrays) => {
+      return 1;
+    });
   }
 
 }
