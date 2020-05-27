@@ -1,3 +1,6 @@
 bug:
 Uncaught TypeError: Cannot read property 'id' of undefined at registerNgModuleType - angular PWA
 解决:在module中引入了component,并且在declares中也声明了component
+
+note:
+声明了interface类型接口Hero,在初始化Hero时,html中hero.id就不会报错

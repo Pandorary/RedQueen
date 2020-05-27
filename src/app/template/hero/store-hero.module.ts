@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeroComponent } from './hero.component';
+import { HeroesComponent } from './heroes.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { TemplateCenterComponent } from '../template-center/template-center.component';
 import { StoreHeroRoutingModule } from './store-hero-routing.module';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     HeroDetailComponent,
-    HeroComponent,
+    HeroesComponent,
     ProductListComponent,
     TopBarComponent,
-    TemplateCenterComponent
+    TemplateCenterComponent,
+    DashboardComponent
   ],
   imports: [
     HttpClientModule,
